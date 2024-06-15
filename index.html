@@ -132,10 +132,10 @@
                 <a href="https://www.microsoft.com/en-us/research/people/jfgao/">Jianfeng Gao</a><sup style="color:#9b59b6;">4</sup>,
             </span>
             <span class="author-block">
-                <a href="#">Chaowei Xiao</a><sup style="color:#3498db;">5</sup>,
+                <a href="https://xiaocw11.github.io/">Chaowei Xiao</a><sup style="color:#3498db;">5</sup>,
             </span>
             <span class="author-block">
-                <a href="#">Lichao Sun</a><sup style="color:#a44c3c;">6</sup>
+                <a href="https://lichao-sun.github.io/">Lichao Sun</a><sup style="color:#a44c3c;">6</sup>
             </span>
         </div>
         
@@ -261,22 +261,22 @@
     <div class="columns is-centered m-6">
       <div class="column is-full has-text-centered content">
         <div id="results-carousel" class="carousel results-carousel">
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/dygenset_framework.png" alt="geometric reasoning" width="84%"/>
-              <p> Accuracy scores of one leading LLM (i.e., PoT GPT-4), four primary LMMs, random chance, and human performance our proposed 
-              across mathematical reasoning and visual context types. PoT refers to program-of-thought prompting, and PoT GPT-4 is a textual LLM augmented with the caption and OCR text. GPT-4V is manually evaluated via the playground chatbot. <b class="best-score-text" style="color: #C6011F"> The scores of Gemini Ultra are from the Gemini Team, Google.</b>
-              </p>
-            </div>
-          </div>
+
           <div class="box m-5">
             <div class="content has-text-centered">
               <img src="static/images/overview_UniGen.png" alt="geometric reasoning" width="84%"/>
-              <p> Accuracy scores of one leading LLM (i.e., PoT GPT-4), four primary LMMs, random chance, and human performance our proposed 
-              <img src="static/images/mathvista.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-              <span class="mathvista">MathVista</span>
-              across mathematical reasoning and visual context types. PoT refers to program-of-thought prompting, and PoT GPT-4 is a textual LLM augmented with the caption and OCR text. GPT-4V is manually evaluated via the playground chatbot.
+              <p> <img src="static/images/unigen_icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/><span class="unigen">UniGen</span> framework</b>
               </p>
+            </div>
+            
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/dygenset_framework.png" alt="geometric reasoning" width="84%"/>
+              <p> 
+                <img src="static/images/unigen_icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/><span class="unigen">UniGen</span>  framework: A comprehensive system for generating diverse, accurate, and controllable text datasets using Large Language Models, integrating original datasets, user-defined constraints, and innovative evaluation and post-processing mechanisms.”  
+            
+            </p>
             </div>
           </div>
         </div>
@@ -304,33 +304,6 @@
                 <li><strong>Controllability:</strong> Accepts user <em>constraints</em> to make generation more controllable.</li>
                 <li><strong>Various Applications:</strong> Can be applied for <em>dynamic benchmarks</em> or <em>data augmentation</em>.</li>
             </ul>
-
-
-
-
-
-          <p>
-          <b>Large Language Models (LLMs)</b> and <b>Large Multimodal Models (LMMs)</b> exhibit impressive problem-solving skills in many tasks and domains, but their ability in mathematical reasoning in visual contexts has not been systematically studied.
-          </p>
-          <p>
-            To bridge this gap, we present <img src="" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-            <span class="mathvista">MathVista</span>, a benchmark designed to combine challenges from diverse mathematical and visual tasks. It consists of <b>6,141 examples</b>, derived from <b>28 existing multimodal datasets</b> involving mathematics and <b>3 newly created datasets</b> (i.e., <b>IQTest, FunctionQA, and PaperQA</b>). Completing these tasks requires fine-grained, deep visual understanding and compositional reasoning, which all state-of-the-art foundation models find challenging. 
-          </p>
-          <p>
-            With <img src="static/images/mathvista.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-            <span class="mathvista">MathVista</span>, we have conducted <b>a comprehensive, quantitative evaluation of 12 prominent foundation models</b>. The best-performing <b>GPT-4V</b> model achieves an overall accuracy of <b>49.9%</b>, substantially outperforming Bard, the second-best performer, by <b>15.1%</b>. Our in-depth analysis reveals that the superiority of <b>GPT-4V</b> is mainly attributed to its enhanced visual perception and mathematical reasoning. However, <b>GPT-4V</b> still falls short of human performance by <b>10.4%</b>, as it often struggles to understand complex figures and perform rigorous reasoning. This significant gap underscores the critical role that <img src="static/images/mathvista.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>
-            <span class="mathvista">MathVista</span> will play in the development of general-purpose AI agents capable of tackling mathematically intensive and visually rich real-world tasks. We further explore the new ability of <b>self-verification</b>, the use of <b>self-consistency</b>, and the  <b>goal-directed multi-turn human-AI dialogues</b>, highlighting the promising potential of GPT-4V for future research. 
-          </p>
-        </div>
-        <h2>Features</h2>
-            <ul>
-                <li><strong>Generalization:</strong> UniGen supports all textual datasets as input to generate a new dataset.</li>
-                <li><strong>Diversity:</strong> Supports <em>Attribute-Guided Generation</em>, <em>Diverse Example Selection for ICL</em>, and <em>Group Checking</em> to enhance data diversity.</li>
-                <li><strong>Truthfulness:</strong> Equipped with <em>Self-Evaluation</em>, <em>Code-Based Validation</em>, and <em>RAG-Based Validation</em> to ensure truthfulness.</li>
-                <li><strong>Controllability:</strong> Accepts user <em>constraints</em> to make generation more controllable.</li>
-                <li><strong>Various Applications:</strong> Can be applied for <em>dynamic benchmarks</em> or <em>data augmentation</em>.</li>
-            </ul>
-
       </div>
     </div>
     <!--/ Abstract. -->
@@ -359,12 +332,12 @@
         <img class="center-block org-banner" src="static/images/logos/ND.png">
     </a>
     <a href="https://www.microsoft.com/en-us/research/" target="_blank" rel="external">
-        <img class="center-block org-banner" src="static/images/logos/microsoft.png">
+        <img class="center-block org-banner" src="static/images/logos/Microsoft.png">
     </a>
-    <a href="https://www.microsoft.com/en-us/research/" target="_blank" rel="external">
+    <a href="https://www.wisc.edu/" target="_blank" rel="external">
         <img class="center-block org-banner" src="static/images/logos/UWM.png">
     </a>
-    <a href="https://www.microsoft.com/en-us/research/" target="_blank" rel="external">
+    <a href="https://www2.lehigh.edu/" target="_blank" rel="external">
         <img class="center-block org-banner" src="static/images/logos/Lehigh-University-logo.png">
     </a>
   </div>
