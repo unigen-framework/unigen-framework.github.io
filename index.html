@@ -61,6 +61,10 @@
             border: 1px solid #ddd;
             font-size: 0.9em; /* 可选：减小字体大小以节省空间 */
         }
+        .highlight {
+            background-color: #f0f0f0;
+            color: #9932CC; /* 近似于violet */
+        }
         thead {
             background-color: #f2f2f2;
         }
@@ -469,6 +473,234 @@
 </div>
         </div>
 </section>
+
+<section class="section">
+  <div class="container" style="margin-bottom: 2vh;">
+    <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+        <h2 class="title is-3">Application I: Benchmarking</h2>
+        <br>
+<!--<div class="content has-text-justified">-->
+<table>
+        <caption>The main results on generated datasets (i.e., gen.) and original datasets (i.e., ori.).</caption>
+        <thead>
+            <tr>
+                <th rowspan="2">Dataset</th>
+                <th colspan="2">GSM8K</th>
+                <th colspan="2">MMLU</th>
+                <th colspan="2">TruthfulQA</th>
+                <th colspan="2">HellaSwag</th>
+            </tr>
+            <tr>
+                <th>ori.</th>
+                <th>gen.</th>
+                <th>ori.</th>
+                <th>gen.</th>
+                <th>ori.</th>
+                <th>gen.</th>
+                <th>ori.</th>
+                <th>gen.</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="background-color: #EDDBFF">
+                <td colspan="9"><strong>GPT-4 Generation</strong></td>
+            </tr>
+            <tr>
+                <td>ChatGPT</td>
+                <td>0.762</td>
+                <td>0.665</td>
+                <td>0.609</td>
+                <td>0.798</td>
+                <td>0.825</td>
+                <td>0.837</td>
+                <td>0.611</td>
+                <td>0.960</td>
+            </tr>
+            <tr>
+                <td>Claude-3</td>
+                <td>0.953</td>
+                <td>0.778</td>
+                <td>0.810</td>
+                <td>0.903</td>
+                <td>0.855</td>
+                <td>0.919</td>
+                <td>0.888</td>
+                <td>0.935</td>
+            </tr>
+            <tr>
+                <td>Llama3-70b</td>
+                <td>0.890</td>
+                <td>0.689</td>
+                <td>0.755</td>
+                <td>0.857</td>
+                <td>0.750</td>
+                <td>0.914</td>
+                <td>0.836</td>
+                <td>0.949</td>
+            </tr>
+            <tr>
+                <td>Llama3-8b</td>
+                <td>0.800</td>
+                <td>0.613</td>
+                <td>0.565</td>
+                <td>0.741</td>
+                <td>0.450</td>
+                <td>0.795</td>
+                <td>0.684</td>
+                <td>0.793</td>
+            </tr>
+            <tr>
+                <td>Mistral-7b</td>
+                <td>0.313</td>
+                <td>0.377</td>
+                <td>0.490</td>
+                <td>0.709</td>
+                <td>0.382</td>
+                <td>0.738</td>
+                <td>0.600</td>
+                <td>0.696</td>
+            </tr>
+            <tr>
+                <td>Mixtral-8x7b</td>
+                <td>0.610</td>
+                <td>0.509</td>
+                <td>0.720</td>
+                <td>0.851</td>
+                <td>0.640</td>
+                <td>0.824</td>
+                <td>0.712</td>
+                <td>0.511</td>
+            </tr>
+            <tr>
+                <td>Yi-34b</td>
+                <td>0.687</td>
+                <td>0.637</td>
+                <td>0.645</td>
+                <td>0.815</td>
+                <td>0.485</td>
+                <td>0.857</td>
+                <td>0.740</td>
+                <td>0.572</td>
+            </tr>
+
+            <tr style="background-color: #EDDBFF">
+                <td colspan="9"><strong>Claude-3-Opus Generation</strong></td>
+            </tr>
+            <tr>
+                <td>ChatGPT</td>
+                <td>0.762</td>
+                <td>0.405</td>
+                <td>0.609</td>
+                <td>0.802</td>
+                <td>0.432</td>
+                <td>0.744</td>
+                <td>0.538</td>
+                <td>0.712</td>
+            </tr>
+            <tr>
+                <td>GPT-4</td>
+                <td>0.947</td>
+                <td>0.508</td>
+                <td>0.725</td>
+                <td>0.848</td>
+                <td>0.841</td>
+                <td>0.888</td>
+                <td>0.736</td>
+                <td>0.835</td>
+            </tr>
+            <tr>
+                <td>Llama3-70b</td>
+                <td>0.890</td>
+                <td>0.444</td>
+                <td>0.755</td>
+                <td>0.846</td>
+                <td>0.750</td>
+                <td>0.854</td>
+                <td>0.836</td>
+                <td>0.769</td>
+            </tr>
+            <tr>
+                <td>Llama3-8b</td>
+                <td>0.800</td>
+                <td>0.367</td>
+                <td>0.565</td>
+                <td>0.780</td>
+                <td>0.450</td>
+                <td>0.709</td>
+                <td>0.568</td>
+                <td>0.704</td>
+            </tr>
+                        <tr>
+                <td>Mistral-7b</td>
+                <td>0.313</td>
+                <td>0.158</td>
+                <td>0.490</td>
+                <td>0.709</td>
+                <td>0.380</td>
+                <td>0.621</td>
+                <td>0.580</td>
+                <td>0.690</td>
+            </tr>
+            <tr>
+                <td>Mixtral-8x7b</td>
+                <td>0.610</td>
+                <td>0.291</td>
+                <td>0.720</td>
+                <td>0.717</td>
+                <td>0.640</td>
+                <td>0.680</td>
+                <td>0.600</td>
+                <td>0.565</td>
+            </tr>
+            <tr>
+                <td>Yi-34b</td>
+                <td>0.687</td>
+                <td>0.323</td>
+                <td>0.645</td>
+                <td>0.751</td>
+                <td>0.480</td>
+                <td>0.694</td>
+                <td>0.644</td>
+                <td>0.584</td>
+            </tr>
+
+        </tbody>
+    </table>
+        </div>
+
+         </div>
+        </div>
+</section>
+
+
+
+
+
+
+
+<section class="section">
+  <div class="container" style="margin-bottom: 2vh;">
+    <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+        <h2 class="title is-3">Application II: Data Augmentation</h2>
+        <br>
+        <img src="static/images/sft_res.png" alt="sft_res">
+
+        </div>
+
+         </div>
+        </div>
+</section>
+
+
+
+
+
+
+
+
+
 
 
 <!-- @PAN TODO: bibtex -->
