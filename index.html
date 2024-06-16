@@ -50,6 +50,33 @@
   <script src="./data/results/model_scores.js" defer></script>
 
   <script src="./visualizer/data/data_public.js" defer></script>
+    <style>
+        table {
+            width: 80%; /* 将整体宽度减小 */
+            border-collapse: collapse;
+            margin: auto; /* 让表格居中显示 */
+        }
+        th, td {
+            padding: 4px; /* 减小单元格的内边距 */
+            border: 1px solid #ddd;
+            font-size: 0.9em; /* 可选：减小字体大小以节省空间 */
+        }
+        thead {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .checkmark {
+            color: green;
+        }
+        .xmark {
+            color: red;
+        }
+        .xcheck {
+            color: lightskyblue;
+        }
+    </style>
 </head>
 <body>
 
@@ -278,7 +305,7 @@
             <div class="content has-text-centered">
               <img src="static/images/architecture.png" alt="geometric reasoning" width="84%"/>
               <p> 
-                <img src="static/images/unigen_icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/><span class="unigen">UniGen</span>  framework: A comprehensive system for generating diverse, accurate, and controllable text datasets using Large Language Models, integrating original datasets, user-defined constraints, and innovative evaluation and post-processing mechanisms.”  
+                <img src="static/images/unigen_icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/><span class="unigen">UniGen</span>  framework: A comprehensive system for generating diverse, accurate, and controllable text datasets using Large Language Models, integrating original datasets, user-defined constraints, and innovative evaluation and post-processing mechanisms.
             
             </p>
             </div>
@@ -287,6 +314,8 @@
       </div>
     </div>
 </section>
+
+
 
 
 <section class="section">
@@ -316,7 +345,130 @@
 </div>
 </section>
 
+<section class="section">
+    <div class="container" style="margin-bottom: 2vh;">
+        <div class="columns is-centered has-text-centered">
+    <table>
+        <caption>Comparison of different dataset generation frameworks. The lightblue checkmark means the work may achieve parts of the goal (not all).</caption>
+        <thead>
+            <tr>
+                <th>Work</th>
+                <th>Generali.</th>
+                <th>Control.</th>
+                <th>Diversity</th>
+                <th>Truthful</th>
+                <th>w/o Human.</th>
+                <th>New Knowledge</th>
+                <th>Dynamic Bench.</th>
+                <th>Data Aug.</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="background-color: #e0e0e0;">
+                <td>DyVal (2024)</td>
+                <td class="xmark">✗</td>
+                <td class="xmark">✗</td>
+                <td class="xmark">✗</td>
+                <td class="checkmark">✔</td>
+                <td class="checkmark">✔</td>
+                <td class="xmark">✗</td>
+                <td class="checkmark">✔</td>
+                <td class="checkmark">✔</td>
+            </tr>
+            <tr>
+                <td>DyVal 2 (2024)</td>
+                <td class="checkmark">✔</td>
+                <td class="xcheck">✔</td>
+                <td class="xmark">✗</td>
+                <td class="xmark">✗</td>
+                <td class="checkmark">✔</td>
+                <td class="xcheck">✔</td>
+                <td class="checkmark">✔</td>
+                <td class="checkmark">✔</td>
+            </tr>
+            <tr style="background-color: #e0e0e0;">
+                <td>S3Eval (2024)</td>
+                <td class="xmark">✗</td>
+                <td class="checkmark">✔</td>
+                <td class="xmark">✗</td>
+                <td class="xmark">✗</td>
+                <td class="checkmark">✔</td>
+                <td class="xmark">✗</td>
+                <td class="checkmark">✔</td>
+                <td class="xmark">✗</td>
+            </tr>
+                        <tr>
+                <td>Yu et al. (2024)</td>
+                <td class="xcheck">✔</td>
+                <td class="checkmark">✔</td>
+                <td class="checkmark">✔</td>
+                <td class="xmark">✗</td>
+                <td class="checkmark">✔</td>
+                <td class="checkmark">✔</td>
+                <td class="xmark">✗</td>
+                <td class="checkmark">✔</td>
+            </tr>
+            <tr style="background-color: #e0e0e0;">
+                <td>Chung et al. (2023)</td>
+                <td class="xmark">✗</td>
+                <td class="xmark">✗</td>
+                <td class="checkmark">✔</td>
+                <td class="checkmark">✔</td>
+                <td class="xmark">✗</td>
+                <td class="xmark">✗</td>
+                <td class="xmark">✗</td>
+                <td class="xmark">✗</td>
+            </tr>
+            <tr>
+                <td>Fan et al. (2024)</td>
+                <td class="xmark">✗</td>
+                <td class="xmark">✗</td>
+                <td class="xmark">✗</td>
+                <td class="checkmark">✔</td>
+                <td class="checkmark">✔</td>
+                <td class="xmark">✗</td>
+                <td class="checkmark">✔</td>
+                <td class="xmark">✗</td>
+            </tr>
+            <tr style="background-color: #e0e0e0;">
+                <td>Jandaghi et al. (2023)</td>
+                <td class="xmark">✗</td>
+                <td class="xmark">✗</td>
+                <td class="xmark">✗</td>
+                <td class="xmark">✗</td>
+                <td class="checkmark">✔</td>
+                <td class="checkmark">✔</td>
+                <td class="xmark">✗</td>
+                <td class="xmark">✗</td>
+            </tr>
+            <tr>
+                <td>Wang et al. (2024)</td>
+                <td class="checkmark">✔</td>
+                <td class="xmark">✗</td>
+                <td class="xmark">✗</td>
+                <td class="xcheck">✔</td>
+                <td class="checkmark">✔</td>
+                <td class="xcheck">✔</td>
+                <td class="checkmark">✔</td>
+                <td class="xmark">✗</td>
+            </tr>
+            <tr style="background-color: #e0e0e0;">
+                <td><strong>UniGen</strong></td>
+                <td class="checkmark">✔</td>
+                <td class="checkmark">✔</td>
+                <td class="checkmark">✔</td>
+                <td class="checkmark">✔</td>
+                <td class="checkmark">✔</td>
+                <td class="checkmark">✔</td>
+                <td class="checkmark">✔</td>
+                <td class="checkmark">✔</td>
+            </tr>
 
+        </tbody>
+    </table>
+</div>
+        </div>
+</section>
 
 
 <!-- @PAN TODO: bibtex -->
