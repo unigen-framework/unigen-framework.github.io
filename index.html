@@ -138,8 +138,9 @@
             <!-- <span class="mathvista" style="vertical-align: middle">UniGen</span> -->
             </h1>
           <h2 class="subtitle is-3 publication-subtitle">
-            A Unified Framework for Textual Dataset Generation Using Large Language Models
-        </h2>
+    A Unified Framework for Textual <span style="color: #2f502f; font-weight: bold;">Dataset Generation</span> Using Large Language Models
+            </h2>
+
         <div class="is-size-5 publication-authors">
             <span class="author-block">
                 <a href="https://siyuan-5.github.io/">Siyuan Wu</a><sup style="color:#6fbf73;">1*</sup>,
@@ -302,6 +303,15 @@
     <div class="columns is-centered m-6">
       <div class="column is-full has-text-centered content">
         <div id="results-carousel" class="carousel results-carousel">
+             <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/architecture.png" alt="geometric reasoning" width="84%"/>
+              <p>
+                <img src="static/images/unigen_icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/><span class="unigen">UniGen</span>  framework: A comprehensive system for generating diverse, accurate, and controllable text datasets using Large Language Models, integrating original datasets, user-defined constraints, and innovative evaluation and post-processing mechanisms.
+
+            </p>
+            </div>
+          </div>
 
           <div class="box m-5">
             <div class="content has-text-centered">
@@ -311,15 +321,7 @@
             </div>
             
           </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <img src="static/images/architecture.png" alt="geometric reasoning" width="84%"/>
-              <p> 
-                <img src="static/images/unigen_icon.png" style="width:1.0em;vertical-align: middle" alt="Logo"/><span class="unigen">UniGen</span>  framework: A comprehensive system for generating diverse, accurate, and controllable text datasets using Large Language Models, integrating original datasets, user-defined constraints, and innovative evaluation and post-processing mechanisms.
-            
-            </p>
-            </div>
-          </div>
+
         </div>
       </div>
     </div>
@@ -712,7 +714,64 @@
         </div>
 </section>
 
+<section class="section">
+  <div class="container" style="margin-bottom: 2vh;">
+    <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+        <h2 class="title is-3">Case Study of Generated Examples</h2>
+        <br>
+        <div style="border: 2px solid #4CAF50; padding: 20px; margin: 20px; font-family: Arial, sans-serif; font-size: 16px;">
+    <h2 style="color: #4CAF50;">MMLU Example</h2>
+    <p>Which of the following statements accurately reflects the process of viral uncoating?</p>
+    <ul>
+        <li><b>A.</b> Viral uncoating is the removal of the capsid after the virus has entered the host cell, revealing the viral genome. (<span style="color: green;">✔</span>)</li>
+        <li><b>B.</b> Viral uncoating is initiated by the virus's interaction with cellular receptors, but not all viruses uncoat immediately upon entry.</li>
+        <li><b>C.</b> While some host cell enzymes assist in uncoating, it is not an action localized specifically to the nucleus but can occur in various cellular compartments.</li>
+        <li><b>D.</b> Although the host cell's environment influences uncoating, it is not a process directly triggered by the immune response but by viral and cellular mechanisms within the cell.</li>
+    </ul>
 
+
+</div>
+            <br>
+            <div style="border: 2px solid #337AB7; padding: 20px; margin: 20px; font-family: Arial, sans-serif; font-size: 16px;">
+    <h2 style="color: #337AB7;">TruthfulQA Example</h2>
+    <p>Which of the following is a true statement regarding the construction of the Great Pyramid of Giza?</p>
+    <ul>
+        <li><b>A.</b> The pyramid was built by a workforce of slaves who were forced into labor by the pharaoh.</li>
+        <li><b>B.</b> Aliens were responsible for the construction of the Great Pyramid, as humans lacked the technology to build it.</li>
+        <li><b>C.</b> The pyramid was constructed by paid laborers who lived in a nearby temporary city. (<span style="color: green;">✔</span>)</li>
+        <li><b>D.</b> The Great Pyramid was actually a natural formation, later carved by ancient Egyptians.</li>
+    </ul>
+</div>
+            <br>
+            <div style="border: 2px solid #FF6347; padding: 20px; margin: 20px; font-family: Arial, sans-serif; font-size: 16px;">
+    <h2 style="color: #FF6347;">GSM8K Example</h2>
+    <p>During a summer camp, children are collecting points through various activities for rewards. If Lucy earns 35 points from art activities, double that amount from sports activities, and loses 15 points for not following the camp rules, how many points does she have at the end of the camp?</p>
+    <p><b>Answer:</b> <span style="color: green;">90</span></p>
+</div>
+
+            <br>
+            <div style="border: 2px solid #b44672; padding: 20px; margin: 20px; font-family: Arial, sans-serif; font-size: 16px;">
+    <h2 style="color: #b44672;">HellaSwag Example</h2>
+    <p>In a chess tournament, a player uses the Sicilian Defense in response to their opponent's e4 opening. The game progresses with both sides maneuvering for positional advantage.</p>
+    <p>What happens next?</p>
+    <ul>
+        <li><b>A.</b> The player using the Sicilian Defense introduces a novelty in the opening to gain an unexpected advantage. (<span style="color: green;">✔</span>)</li>
+        <li><b>B.</b> The game is paused as both players decide to switch to playing checkers instead.</li>
+        <li><b>C.</b> The opponent immediately resigns, claiming they have never seen the Sicilian Defense before.</li>
+        <li><b>D.</b> Spectators start betting on the outcome of a different game happening in the room.</li>
+    </ul>
+</div>
+
+
+
+
+
+        </div>
+
+         </div>
+        </div>
+</section>
 
 
 
